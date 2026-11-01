@@ -1,0 +1,43 @@
+﻿易懂通 Android 源码包
+版本：v1.2.0（通知读取白名单迭代）
+打包日期：2026-10-29
+Git 提交：1fb18c7 feat: 通知读取支持按应用白名单
+
+一、本版变更
+1. 新增“通知读取范围”页面，由用户自行勾选允许读取通知的应用。
+2. 默认只读取系统短信应用（信息），微信等聊天软件默认关闭。
+3. 未勾选应用的通知在监听服务入口直接丢弃，不进入提醒与朗读流程。
+4. 易懂通自身通知永不读取；短信广播链路不受影响。
+5. 通知监听服务增加保活与开机自启（BootReceiver / MessageGuardService）。
+6. 新增白名单策略单元测试。
+
+二、隐私与安全
+1. 老人端短信用完即弃，仅内存流转，不写本地数据库。
+2. 监管端仍为被动接收，不能远程读取、拦截、修改或删除老人短信。
+3. Android 的“通知使用权”只能整体开启/关闭，无法按应用向系统授权；
+   因此按应用过滤由 App 内部白名单实现，选择页已说明该限制。
+
+三、构建环境
+1. compileSdk / targetSdk：37
+2. minSdk：26（Android 8.0）
+3. Java / Kotlin 目标：JDK 17
+4. Gradle：9.6.0（wrapper 已内置）
+5. Android Gradle Plugin：见根目录 build.gradle.kts
+
+四、导入与构建
+1. 用 Android Studio 打开根目录（易懂通-Android）。
+2. 首次打开会提示配置 SDK，按本机路径生成 local.properties 即可。
+3. 命令行构建：gradlew.bat assembleDebug
+4. 单元测试：gradlew.bat testDebugUnitTest
+5. 静态检查：gradlew.bat lintDebug
+
+五、安装包
+安装包/易懂通-v1.2.0-通知白名单-debug.apk
+说明：debug 签名，仅用于内部测试；正式发布需使用 release 签名。
+
+六、未包含内容
+.git、.gradle、.idea、各模块 build 目录、local.properties、签名文件。
+这些均为本地环境或构建产物，不影响源码导入与编译。
+
+七、V2 规划（仅注释标记，未实现）
+局域网 Socket 同步保持不变；V2 再接入自建中转服务器，不包含任何公网逻辑。

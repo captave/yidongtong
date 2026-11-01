@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="surface">#201914</color>
+    <color name="card">#30251E</color>
+    <color name="ink">#FFF7EE</color>
+    <color name="ink_secondary">#DBC6B5</color>
+    <color name="brand_blue">#FFBE89</color>
+    <color name="deep_green">#FFBE89</color>
+    <color name="green_soft">#453023</color>
+    <color name="warning_red">#FF8A80</color>
+    <color name="warning_soft">#431F1D</color>
+    <color name="line">#6B5140</color>
+    <color name="button_blue">#A34D21</color>
+    <color name="button_green">#A34D21</color>
+    <color name="button_red">#B42318</color>
+</resources>

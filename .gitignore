@@ -1,0 +1,17 @@
+.gradle/
+.idea/
+local.properties
+**/build/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+*.jks
+*.keystore
+*.pem
+*.key
+.env
+.env.local
+.env.*.local
+yidongtong-*.png
+yidongtong*-ui.xml
