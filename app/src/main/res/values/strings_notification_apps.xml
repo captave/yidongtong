@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_apps_title">通知读取范围</string>
+    <string name="notification_apps_back">返回</string>
+    <string name="notification_apps_desc">Android 的“通知使用权”只能整体开启或关闭，不能直接指定应用。这里决定易懂通实际读取哪些应用的通知。</string>
+    <string name="notification_apps_section">允许读取通知的应用</string>
+    <string name="notification_apps_footer">只读取已勾选应用的通知；短信广播不受影响。</string>
+    <string name="notification_apps_button">选择要读取通知的应用</string>
+    <string name="notification_apps_hint">默认只读取系统短信应用。微信等聊天软件需要在这里手动开启。</string>
+    <string name="notification_apps_summary_none">当前不读取任何应用的通知</string>
+    <string name="notification_apps_summary">当前读取 %1$d 个应用：%2$s</string>
+    <string name="notification_apps_summary_more">当前读取 %1$d 个应用：%2$s 等</string>
+    <string name="notification_apps_selected_count">已选择 %1$d 个应用</string>
+    <string name="notification_apps_keep_sms">只保留短信应用</string>
+    <string name="notification_apps_keep_sms_done">已只保留短信应用</string>
+    <string name="notification_apps_no_sms">没有找到系统短信应用，已清空选择</string>
+    <string name="notification_apps_empty">没有找到可选择的应用程序</string>
+    <string name="notification_apps_default_sms">系统短信应用</string>
+</resources>

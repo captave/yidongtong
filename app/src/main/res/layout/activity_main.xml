@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainScroll" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/surface" android:clipToPadding="false" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingBottom="48dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_header" android:orientation="vertical"
+            android:paddingStart="22dp" android:paddingTop="28dp" android:paddingEnd="22dp" android:paddingBottom="24dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="易懂通" android:textColor="@android:color/white" android:textSize="38sp" android:textStyle="bold" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp"
+                android:text="把重要信息说清楚，帮您守住安全" android:textColor="#E8FFF4" android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingStart="18dp" android:paddingTop="18dp" android:paddingEnd="18dp">
+            <TextView style="@style/GroupLabel" android:text="今日守护" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/bg_status" android:orientation="vertical">
+                <TextView android:id="@+id/statusText" style="@style/SectionTitle" android:text="尚未完全开启" />
+                <Button android:id="@+id/permissionButton" style="@style/LargeSecondaryButton"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="开启短信守护" />
+                <TextView android:id="@+id/notificationAccessText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" android:lineSpacingExtra="4dp" android:text="通知读取状态"
+                    android:textColor="@color/ink" android:textSize="19sp" />
+                <Button android:id="@+id/notificationAccessButton" style="@style/LargeNeutralButton"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="开启通知使用权" />
+                <Button android:id="@+id/notificationAppsButton" style="@style/LargeNeutralButton"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/notification_apps_button" />
+                <TextView android:id="@+id/notificationAppsSummary" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:text="@string/notification_apps_summary_none" android:textColor="@color/ink" android:textSize="18sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:lineSpacingExtra="3dp" android:text="@string/notification_apps_hint"
+                    android:textColor="@color/ink_secondary" android:textSize="16sp" />
+                <Button android:id="@+id/testNotificationButton" style="@style/LargePrimaryButton"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="测试易懂通提醒" />
+            </LinearLayout>
+
+            <TextView style="@style/GroupLabel" android:layout_marginTop="22dp" android:text="最新信息" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/bg_card" android:orientation="vertical">
+                <TextView android:id="@+id/senderText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="等待新信息" android:textColor="@color/ink" android:textSize="26sp" android:textStyle="bold" />
+                <TextView android:id="@+id/messageText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:lineSpacingExtra="7dp" android:text="收到信息后，可在这里大字查看和朗读。"
+                    android:textColor="@color/ink" android:textIsSelectable="true" android:textSize="23sp" />
+                <LinearLayout android:id="@+id/riskPanel" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" android:background="@drawable/bg_warning" android:orientation="vertical" android:visibility="gone">
+                    <TextView android:id="@+id/riskHeadingText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="警惕诈骗" android:textColor="@color/warning_red" android:textSize="26sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/riskReasonText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" android:lineSpacingExtra="5dp" android:text="请先核实信息"
+                        android:textColor="@color/ink" android:textSize="20sp" android:textStyle="bold" />
+                </LinearLayout>
+                <Button android:id="@+id/speakButton" style="@style/LargePrimaryButton" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="16dp" android:enabled="false" android:text="🔊 普通话朗读" />
+                <Button android:id="@+id/callButton" style="@style/LargeWarningButton" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="☎ 联系紧急联系人" android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView style="@style/GroupLabel" android:layout_marginTop="22dp" android:text="安全守护" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/bg_card" android:orientation="vertical">
+                <TextView style="@style/SectionTitle" android:text="智能危险判断" />
+                <TextView android:id="@+id/aiBackendStatusText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" android:text="尚未配置 API Key" android:textColor="@color/ink_secondary" android:textSize="18sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp"
+                    android:text="API Key 会使用系统安全密钥加密后保存在本机。开启分析后，发送方或来源及信息正文会直接发送到 DeepSeek；关闭后不再上传新信息。"
+                    android:textColor="@color/ink_secondary" android:textSize="18sp" />
+                <EditText android:id="@+id/apiKeyInput" style="@style/LargeInput" android:layout_marginTop="12dp"
+                    android:hint="输入 DeepSeek API Key（sk- 开头）" android:importantForAutofill="noExcludeDescendants"
+                    android:inputType="textPassword" android:maxLength="240" android:saveEnabled="false" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:orientation="horizontal">
+                    <Button android:id="@+id/saveApiKeyButton" style="@style/LargeSecondaryButton"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="保存 Key" />
+                    <Button android:id="@+id/clearApiKeyButton" style="@style/LargeNeutralButton"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="10dp"
+                        android:layout_weight="1" android:text="删除 Key" />
+                </LinearLayout>
+                <Switch android:id="@+id/deepSeekSwitch" style="@style/LargeSettingSwitch" android:text="开启 DeepSeek 分析" />
+                <View style="@style/SettingDivider" />
+                <TextView style="@style/SectionTitle" android:text="通知家人" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp"
+                    android:text="开启后，仅将判断为高危的真实短信同步给紧急联系人。" android:textColor="@color/ink_secondary" android:textSize="18sp" />
+                <Switch android:id="@+id/emergencyForwardSwitch" style="@style/LargeSettingSwitch" android:text="同步高危信息给联系人" />
+            </LinearLayout>
+
+            <TextView style="@style/GroupLabel" android:layout_marginTop="22dp" android:text="紧急联系人" />
+            <LinearLayout android:id="@+id/contactCard" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/bg_card" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="填写一位可信任的家人" android:textColor="@color/ink_secondary" android:textSize="19sp" />
+                <EditText android:id="@+id/contactNameInput" style="@style/LargeInput" android:layout_marginTop="12dp"
+                    android:autofillHints="name" android:hint="联系人称呼，例如：女儿" android:inputType="textPersonName" android:maxLength="30" />
+                <EditText android:id="@+id/contactPhoneInput" style="@style/LargeInput" android:layout_marginTop="10dp"
+                    android:autofillHints="phone" android:hint="联系人电话号码" android:inputType="phone" android:maxLength="28" />
+                <Button android:id="@+id/saveContactButton" style="@style/LargeSecondaryButton" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="保存紧急联系人" />
+                <Button android:id="@+id/clearContactButton" style="@style/LargeNeutralButton" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="清除联系人" />
+            </LinearLayout>
+
+            <TextView style="@style/GroupLabel" android:layout_marginTop="22dp" android:text="查看与朗读" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/bg_card" android:orientation="vertical">
+                <Switch android:id="@+id/darkThemeSwitch" style="@style/LargeSettingSwitch" android:layout_marginTop="0dp" android:text="使用深色主题" />
+                <View style="@style/SettingDivider" />
+                <TextView android:id="@+id/speechRateLabel" style="@style/SectionTitle" android:text="普通话语速：适中" />
+                <SeekBar android:id="@+id/speechRateSeekBar" android:layout_width="match_parent" android:layout_height="60dp" android:max="6" android:progress="2" />
+            </LinearLayout>
+
+            <TextView style="@style/GroupLabel" android:layout_marginTop="22dp" android:text="信息记录" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/bg_card" android:orientation="vertical">
+                <TextView style="@style/SectionTitle" android:text="近三个月记录" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp"
+                    android:text="可以按号码或内容查询，也可以删除单条记录。" android:textColor="@color/ink_secondary" android:textSize="18sp" />
+                <Button android:id="@+id/historyButton" style="@style/LargePrimaryButton" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="查看和查询记录" />
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp"
+                android:gravity="center" android:lineSpacingExtra="4dp" android:text="记录仅保存在本机，90 天后自动删除。\n云端分析和家人同步均由您自行开启。"
+                android:textColor="@color/ink_secondary" android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

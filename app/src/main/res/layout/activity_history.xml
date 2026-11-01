@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/surface" android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/wechat_green" android:gravity="center_vertical"
+        android:orientation="horizontal" android:padding="14dp">
+        <Button android:id="@+id/historyBackButton" android:layout_width="wrap_content"
+            android:layout_height="56dp" android:backgroundTint="@color/wechat_green_dark"
+            android:text="返回" android:textAllCaps="false" android:textColor="@android:color/white" android:textSize="19sp" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:text="近三个月记录" android:textColor="@android:color/white"
+            android:textSize="27sp" android:textStyle="bold" />
+        <Space android:layout_width="72dp" android:layout_height="1dp" />
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:clipToPadding="false" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="18dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/bg_card" android:orientation="vertical">
+                <TextView style="@style/SectionTitle" android:text="查询记录" />
+                <EditText android:id="@+id/historySearchInput" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_input"
+                    android:hint="输入号码、信息内容或判断结果" android:imeOptions="actionSearch"
+                    android:inputType="text" android:maxLength="80" android:minHeight="62dp"
+                    android:textColor="@color/ink" android:textColorHint="@color/ink_secondary" android:textSize="20sp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:orientation="horizontal">
+                    <Button android:id="@+id/historySearchButton" style="@style/LargePrimaryButton"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="查询" />
+                    <Button android:id="@+id/historyClearSearchButton" style="@style/LargeNeutralButton"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="10dp"
+                        android:layout_weight="1" android:text="显示全部" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:id="@+id/historyResultCount" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="共 0 条"
+                android:textColor="@color/ink_secondary" android:textSize="19sp" />
+            <TextView android:id="@+id/historyEmptyText" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:gravity="center" android:padding="32dp"
+                android:text="没有找到记录" android:textColor="@color/ink_secondary" android:textSize="22sp" />
+            <LinearLayout android:id="@+id/historyResultList" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical" />
+            <Button android:id="@+id/historyClearAllButton" style="@style/LargeWarningButton"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="清空全部记录" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

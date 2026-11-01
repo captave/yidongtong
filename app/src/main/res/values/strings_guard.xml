@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="guard_channel_name">后台守护</string>
+    <string name="guard_channel_description">保持短信提醒与通知读取在后台运行，不显示短信内容</string>
+    <string name="guard_notification_title">易懂通正在守护</string>
+    <string name="guard_notification_text">收到信息时会及时提醒，点此打开</string>
+</resources>

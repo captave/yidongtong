@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="surface">#F4F7F5</color>
+    <color name="card">#FFFFFF</color>
+    <color name="ink">#17211D</color>
+    <color name="ink_secondary">#4E5D56</color>
+    <color name="brand_blue">#145DA0</color>
+    <color name="deep_green">#176B4D</color>
+    <color name="green_soft">#E7F5EE</color>
+    <color name="warning_red">#B42318</color>
+    <color name="warning_soft">#FFF1EE</color>
+    <color name="line">#D7E0DC</color>
+    <color name="button_blue">#145DA0</color>
+    <color name="button_green">#176B4D</color>
+    <color name="button_red">#B42318</color>
+    <color name="wechat_green">#07C160</color>
+    <color name="wechat_green_dark">#16845B</color>
+</resources>
